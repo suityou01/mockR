@@ -21,7 +21,7 @@ describe("MockR REST Mocking framework", () => {
         expect(m.Routes.length).toEqual(1);
         expect(m.Routes[0].Verb).toEqual("GET");
         expect(m.Routes[0].Uri).toEqual("test.com/users");
-        expect(m.Routes[0].data).toEqual(data);
+        expect(m.Routes[0].Data).toEqual(data);
         m.Routes.length = 0;
     });
     it("returns the data as a promise from the specified GET route", async() =>{
@@ -38,7 +38,8 @@ describe("MockR REST Mocking framework", () => {
             }
         ];
         m.addRoute("GET","test.com/users",data);
-        let d = await fetch(uri);
-        //expect(d.json()).toEqual(data);
+        let response = await fetch(uri);
+        let d = await response.json();
+        expect(d).toEqual(data);
     });
 });

@@ -15,7 +15,8 @@ export class MockR {
         if(options==undefined){
             //This is a GET
             let r = this.getRouteByUri(uri,"GET");
-            return Promise.resolve({ json: () => Promise.resolve(promisedData)});
+            console.log(r.Data);
+            return Promise.resolve({ json: () => Promise.resolve(r.Data)});
         }
     }
     get Routes (){
@@ -25,7 +26,7 @@ export class MockR {
         let r = new MockRRoute();
         r.Verb = verb;
         r.Uri = uri;
-        r.data = data;
+        r.Data = data;
         this.Routes.push(r);
     }
     getRouteByUri(uri,verb)
@@ -67,7 +68,7 @@ export class MockRRoute {
         return this._data;
     }
     set Data (data){
-        JSON.parse(data);
-        this._data = value;
+        //JSON.parse(data);
+        this._data = data;
     }
 }
