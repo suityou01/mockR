@@ -1,0 +1,31 @@
+{
+  "name": "mockr",
+  "version": "1.0.0",
+  "description": "Mock REST apis without leaving your browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suityou01/mockR.git"
+  },
+  "keywords": [
+    "Mock",
+    "REST",
+    "JSON",
+    "Javascript"
+  ],
+  "author": "Charlie Benger-Stevenson",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/suityou01/mockR/issues"
+  },
+  "homepage": "https://github.com/suityou01/mockR#readme",
+  "devDependencies": {
+    "jasmine-core": "^3.5.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^2.0.1"
+  }
+}
